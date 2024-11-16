@@ -24,6 +24,7 @@ public class UserServiceImpl implements UserService{
             User user =new User();
             user.setFirstName(userDetails.getFirstName());
             user.setLastName(userDetails.getLastName());
+            user.setUsername(userDetails.getUsername());
             user.setEmail(userDetails.getEmail());
 //            user.setPassword(passwordEncoder.encode(userDetails.getPassword()));
             user.setPassword(userDetails.getPassword());
@@ -34,7 +35,7 @@ public class UserServiceImpl implements UserService{
 
             response.setMessage("user "+userDetails.getUsername()+" successfully created account. Log in to get full access of your account");
             response.setUser(user);
-            response.setStatusCode(500);
+            response.setStatusCode(200);
         }else {
             response.setStatusCode(404);
             response.setMessage("user with username "+userDetails.getUsername() +"already exists! please find another username");
