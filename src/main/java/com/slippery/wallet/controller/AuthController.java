@@ -15,7 +15,7 @@ public class AuthController {
         this.service = service;
     }
     @PostMapping("/register/user")
-    public ResponseEntity<User> registerUser(@RequestBody User userDetails){
+    public ResponseEntity<UserDto> registerUser(@RequestBody User userDetails){
         return ResponseEntity.ok(service.registerUser(userDetails));
     }
     @GetMapping("/home")

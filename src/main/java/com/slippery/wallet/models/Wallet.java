@@ -23,7 +23,6 @@ public class Wallet {
     private String currency;
     private int pin;
     private boolean isActivated;
-
     @OneToOne(fetch = FetchType.LAZY)
     @MapsId
     private User user;
